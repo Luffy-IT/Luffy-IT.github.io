@@ -152,6 +152,97 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Leetcode-node" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/23/Leetcode-node/">Leetcode_node</a>
+    </h1>
+  
+
+        
+        <a href="/2020/09/23/Leetcode-node/" class="archive-article-date">
+  	<time datetime="2020-09-23T12:58:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Leetcode中遇到的一些题目记录"><a href="#Leetcode中遇到的一些题目记录" class="headerlink" title="Leetcode中遇到的一些题目记录"></a>Leetcode中遇到的一些题目记录</h1><!--该博客为本人在Leetcode等刷题的一些笔记，欢迎观赏-->
+
+<ol>
+<li><h4 id="无重复字符的最长子串"><a href="#无重复字符的最长子串" class="headerlink" title="无重复字符的最长子串"></a>无重复字符的最长子串</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">////实例输入：abcda，aabcdaa，bbbbbb，pwwkew</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(<span class="keyword">char</span> * s)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> l,i=<span class="number">0</span>,j=<span class="number">0</span>,maxl=<span class="number">0</span>,cmaxl;</span><br><span class="line">    <span class="keyword">bool</span> hashtf[<span class="number">128</span>]=&#123;<span class="literal">false</span>&#125;; <span class="comment">//hash的标识数组</span></span><br><span class="line">    l = <span class="built_in">strlen</span>(s);</span><br><span class="line">    <span class="keyword">while</span>(i&lt;l &amp;&amp; j&lt;l )</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(hashtf[s[i]]==<span class="literal">false</span>)<span class="comment">//如果没有被标识的就进入标识，s[i]为字母，到hash数组就可以标识有没有遇见过</span></span><br><span class="line">        &#123;</span><br><span class="line">            hashtf[s[i]]=<span class="literal">true</span>;<span class="comment">//记入</span></span><br><span class="line">            cmaxl=i-j+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(cmaxl&gt;maxl)</span><br><span class="line">                maxl=cmaxl;</span><br><span class="line">            i++;<span class="comment">//移动位置</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span><span class="comment">//碰到了遇见过的</span></span><br><span class="line">        &#123;</span><br><span class="line">            hashtf[s[j]]=<span class="literal">false</span>;<span class="comment">//先把之前那个元素变为false，注意这里不能为i不然遇见重复的字符就会到上面的if语句重新变换成true，算出来的数据就是错误的</span></span><br><span class="line">            j++;<span class="comment">//往下移</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> maxl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>该经典题目常用的数据结构为哈希集合，标识关键字。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/">Leetcode链接</a>    <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/solution/cyu-yan-ti-jie-suan-fa-si-xiang-qing-xi-jian-yi-xi/">Leecode解题链接</a></p>
+</blockquote>
+</li>
+<li><p><strong>两数之和</strong></p>
+<p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">给定 nums = [2, 7, 11, 15], target = 9</span></span><br><span class="line"><span class="comment">因为 nums[0] + nums[1] = 2 + 7 = 9</span></span><br><span class="line"><span class="comment">所以返回 [0, 1]</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Note: The returned array must be malloced, assume caller calls free().</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> *<span class="title">twoSum</span><span class="params">(<span class="keyword">int</span> *nums, <span class="keyword">int</span> numsSize, <span class="keyword">int</span> target, <span class="keyword">int</span> *returnSize)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="keyword">int</span> *ret = (<span class="keyword">int</span> *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>)*<span class="number">2</span>);</span><br><span class="line">   <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;numsSize<span class="number">-1</span>;i++)</span><br><span class="line">   &#123;</span><br><span class="line">       <span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>;j&lt;numsSize;j++)</span><br><span class="line">       &#123;</span><br><span class="line">           <span class="keyword">if</span>(nums[i]+nums[j]==target)</span><br><span class="line">           &#123;</span><br><span class="line">               ret[<span class="number">0</span>]=i;</span><br><span class="line">               ret[<span class="number">1</span>]=j;</span><br><span class="line">               *returnSize=<span class="number">2</span>;</span><br><span class="line">               <span class="keyword">return</span> ret;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>传入指针nums之后，先用malloc函数创建返回值，然后赋值给返回值指针ret。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/two-sum/">Leetcode链接</a></p>
+</blockquote>
+</li>
+<li><p>两数相加</p>
+<p>给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。<br>如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。<br>您可以假设除了数字 0 之外，这两个数都不会以 0 开头。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输入：(2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)</span></span><br><span class="line"><span class="comment">输出：7 -&gt; 0 -&gt; 8</span></span><br><span class="line"><span class="comment">原因：342 + 465 = 807</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     struct ListNode *next;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function">struct ListNode* <span class="title">addTwoNumbers</span><span class="params">(struct ListNode* l1, struct ListNode* l2)</span></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> *<span class="title">mylist</span>,*<span class="title">p</span>,*<span class="title">q</span>,*<span class="title">r</span>;</span></span><br><span class="line">    <span class="keyword">int</span> a=<span class="number">1</span>,b=<span class="number">1</span>,x=<span class="number">0</span>,y=<span class="number">0</span>,sum;</span><br><span class="line">    mylist = (struct ListNode*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(struct ListNode));</span><br><span class="line">    mylist-&gt;next=<span class="literal">NULL</span>;</span><br><span class="line">    p=l1-&gt;next;</span><br><span class="line">    <span class="keyword">while</span>(p!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">        x=p-&gt;val*a+x;</span><br><span class="line">        a=a*<span class="number">10</span>;</span><br><span class="line">        p=p-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    q=l2-&gt;next;</span><br><span class="line">    <span class="keyword">while</span>(q!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">        y=q-&gt;val*b+y;</span><br><span class="line">        b=b*<span class="number">10</span>;</span><br><span class="line">        q=q-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    sum=x+y;</span><br><span class="line">    p=mylist;</span><br><span class="line">    <span class="keyword">while</span>(sum&gt;<span class="number">0</span>)&#123;</span><br><span class="line">        r=(struct ListNode*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(struct ListNode));</span><br><span class="line">        r-&gt;val=sum%<span class="number">10</span>;</span><br><span class="line">        sum=sum/<span class="number">10</span>;</span><br><span class="line">        p-&gt;next=r;</span><br><span class="line">        p=r;</span><br><span class="line">    &#125;</span><br><span class="line">    p-&gt;next=<span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">return</span> mylist;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>该题目先遍历链表把数据提取出来之后相加存放在返回链表中，注意插入数据使用尾插法，<strong>值得注意的是</strong>，这道题目在VS上面运行没问题，但是在Leetcode编译器上面提交就有问题了，有可能是VS中的遍历是我自己设置的，而VS的遍历机制可能与我的不相同而导致的。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/add-two-numbers/">Leetcode链接</a></p>
+</blockquote>
+</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/23/Leetcode-node/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-myfirstBlog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
