@@ -6,19 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Leetcode_node | Hexo</title>
+  <title>TCP/IP_notes | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Leetcode中遇到的一些题目记录">
+  <meta name="description" content="TCP&#x2F;IP协议学习笔记One day（包含了一些基础的知识点）">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Leetcode_node">
-<meta property="og:url" content="http://example.com/2020/09/23/Leetcode-node/index.html">
+<meta property="og:title" content="TCP&#x2F;IP_notes">
+<meta property="og:url" content="http://example.com/2020/10/08/TCP-IP-notes/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Leetcode中遇到的一些题目记录">
+<meta property="og:description" content="TCP&#x2F;IP协议学习笔记One day（包含了一些基础的知识点）">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-09-23T12:58:59.000Z">
-<meta property="article:modified_time" content="2020-09-24T14:34:52.223Z">
+<meta property="og:image" content="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2018414355,1230289273&fm=26&gp=0.jpg">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1602092857808&di=58246e25f13e02a45f93d20b8181677c&imgtype=0&src=http%3A%2F%2Fimg2020.cnblogs.com%2Fblog%2F984733%2F202009%2F984733-20200902174242943-2065075535.png">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1602095830843&di=a2302b42f502972aaa1ceac05816500a&imgtype=0&src=http%3A%2F%2Fseo-1255598498.file.myqcloud.com%2Ffull%2F91089bddd782ad8d768d8288141f2ebd64943d8a.jpg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190317101238221.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1d1MDAwOTk5,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2020-10-08T09:08:34.000Z">
+<meta property="article:modified_time" content="2020-10-08T09:11:39.348Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2018414355,1230289273&fm=26&gp=0.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,69 +159,64 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Leetcode-node" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-TCP-IP-notes" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Leetcode_node
+      TCP/IP_notes
     </h1>
   
 
         
-        <a href="/2020/09/23/Leetcode-node/" class="archive-article-date">
-  	<time datetime="2020-09-23T12:58:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-23</time>
+        <a href="/2020/10/08/TCP-IP-notes/" class="archive-article-date">
+  	<time datetime="2020-10-08T09:08:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Leetcode中遇到的一些题目记录"><a href="#Leetcode中遇到的一些题目记录" class="headerlink" title="Leetcode中遇到的一些题目记录"></a>Leetcode中遇到的一些题目记录</h1><!--该博客为本人在Leetcode等刷题的一些笔记，欢迎观赏-->
+        <h1 id="TCP-IP协议学习笔记"><a href="#TCP-IP协议学习笔记" class="headerlink" title="TCP/IP协议学习笔记"></a>TCP/IP协议学习笔记</h1><h2 id="One-day（包含了一些基础的知识点）"><a href="#One-day（包含了一些基础的知识点）" class="headerlink" title="One day（包含了一些基础的知识点）"></a>One day（包含了一些基础的知识点）</h2><a id="more"></a>
 
-<a id="more"></a>
+<p><strong>一般分为七层，TCP/IP有其中四层</strong></p>
+<img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2018414355,1230289273&fm=26&gp=0.jpg" style="zoom: 50%;">
 
 <ol>
-<li><h4 id="无重复字符的最长子串"><a href="#无重复字符的最长子串" class="headerlink" title="无重复字符的最长子串"></a>无重复字符的最长子串</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">////实例输入：abcda，aabcdaa，bbbbbb，pwwkew</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(<span class="keyword">char</span> * s)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> l,i=<span class="number">0</span>,j=<span class="number">0</span>,maxl=<span class="number">0</span>,cmaxl;</span><br><span class="line">    <span class="keyword">bool</span> hashtf[<span class="number">128</span>]=&#123;<span class="literal">false</span>&#125;; <span class="comment">//hash的标识数组</span></span><br><span class="line">    l = <span class="built_in">strlen</span>(s);</span><br><span class="line">    <span class="keyword">while</span>(i&lt;l &amp;&amp; j&lt;l )</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(hashtf[s[i]]==<span class="literal">false</span>)<span class="comment">//如果没有被标识的就进入标识，s[i]为字母，到hash数组就可以标识有没有遇见过</span></span><br><span class="line">        &#123;</span><br><span class="line">            hashtf[s[i]]=<span class="literal">true</span>;<span class="comment">//记入</span></span><br><span class="line">            cmaxl=i-j+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(cmaxl&gt;maxl)</span><br><span class="line">                maxl=cmaxl;</span><br><span class="line">            i++;<span class="comment">//移动位置</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span><span class="comment">//碰到了遇见过的</span></span><br><span class="line">        &#123;</span><br><span class="line">            hashtf[s[j]]=<span class="literal">false</span>;<span class="comment">//先把之前那个元素变为false，注意这里不能为i不然遇见重复的字符就会到上面的if语句重新变换成true，算出来的数据就是错误的</span></span><br><span class="line">            j++;<span class="comment">//往下移</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> maxl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>该经典题目常用的数据结构为哈希集合，标识关键字。</p>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/">Leetcode链接</a>    <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/solution/cyu-yan-ti-jie-suan-fa-si-xiang-qing-xi-jian-yi-xi/">Leecode解题链接</a></p>
-</blockquote>
-</li>
-<li><p><strong>两数之和</strong></p>
-<p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">给定 nums = [2, 7, 11, 15], target = 9</span></span><br><span class="line"><span class="comment">因为 nums[0] + nums[1] = 2 + 7 = 9</span></span><br><span class="line"><span class="comment">所以返回 [0, 1]</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Note: The returned array must be malloced, assume caller calls free().</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> *<span class="title">twoSum</span><span class="params">(<span class="keyword">int</span> *nums, <span class="keyword">int</span> numsSize, <span class="keyword">int</span> target, <span class="keyword">int</span> *returnSize)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="keyword">int</span> *ret = (<span class="keyword">int</span> *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>)*<span class="number">2</span>);</span><br><span class="line">   <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;numsSize<span class="number">-1</span>;i++)</span><br><span class="line">   &#123;</span><br><span class="line">       <span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>;j&lt;numsSize;j++)</span><br><span class="line">       &#123;</span><br><span class="line">           <span class="keyword">if</span>(nums[i]+nums[j]==target)</span><br><span class="line">           &#123;</span><br><span class="line">               ret[<span class="number">0</span>]=i;</span><br><span class="line">               ret[<span class="number">1</span>]=j;</span><br><span class="line">               *returnSize=<span class="number">2</span>;</span><br><span class="line">               <span class="keyword">return</span> ret;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>传入指针nums之后，先用malloc函数创建返回值，然后赋值给返回值指针ret。</p>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/two-sum/">Leetcode链接</a></p>
-</blockquote>
-</li>
-<li><p>两数相加</p>
-<p>给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。<br>如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。<br>您可以假设除了数字 0 之外，这两个数都不会以 0 开头。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输入：(2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)</span></span><br><span class="line"><span class="comment">输出：7 -&gt; 0 -&gt; 8</span></span><br><span class="line"><span class="comment">原因：342 + 465 = 807</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     struct ListNode *next;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function">struct ListNode* <span class="title">addTwoNumbers</span><span class="params">(struct ListNode* l1, struct ListNode* l2)</span></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> *<span class="title">mylist</span>,*<span class="title">p</span>,*<span class="title">q</span>,*<span class="title">r</span>;</span></span><br><span class="line">    <span class="keyword">int</span> a=<span class="number">1</span>,b=<span class="number">1</span>,x=<span class="number">0</span>,y=<span class="number">0</span>,sum;</span><br><span class="line">    mylist = (struct ListNode*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(struct ListNode));</span><br><span class="line">    mylist-&gt;next=<span class="literal">NULL</span>;</span><br><span class="line">    p=l1-&gt;next;</span><br><span class="line">    <span class="keyword">while</span>(p!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">        x=p-&gt;val*a+x;</span><br><span class="line">        a=a*<span class="number">10</span>;</span><br><span class="line">        p=p-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    q=l2-&gt;next;</span><br><span class="line">    <span class="keyword">while</span>(q!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">        y=q-&gt;val*b+y;</span><br><span class="line">        b=b*<span class="number">10</span>;</span><br><span class="line">        q=q-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    sum=x+y;</span><br><span class="line">    p=mylist;</span><br><span class="line">    <span class="keyword">while</span>(sum&gt;<span class="number">0</span>)&#123;</span><br><span class="line">        r=(struct ListNode*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(struct ListNode));</span><br><span class="line">        r-&gt;val=sum%<span class="number">10</span>;</span><br><span class="line">        sum=sum/<span class="number">10</span>;</span><br><span class="line">        p-&gt;next=r;</span><br><span class="line">        p=r;</span><br><span class="line">    &#125;</span><br><span class="line">    p-&gt;next=<span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">return</span> mylist;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>该题目先遍历链表把数据提取出来之后相加存放在返回链表中，注意插入数据使用尾插法，<strong>值得注意的是</strong>，这道题目在VS上面运行没问题，但是在Leetcode编译器上面提交就有问题了，有可能是VS中的遍历是我自己设置的，而VS的遍历机制可能与我的不相同而导致的。</p>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/add-two-numbers/">Leetcode链接</a></p>
-</blockquote>
-</li>
-<li><p>删除链表的倒数N个节点</p>
-<p>给定一个链表，删除链表的倒数第 <em>n</em> 个节点，并且返回链表的头结点。（链表问题和上面一样，问题还待解决）</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">给定一个链表: 1-&gt;2-&gt;3-&gt;4-&gt;5, 和 n = 2.</span></span><br><span class="line"><span class="comment">当删除了倒数第二个节点后，链表变为 1-&gt;2-&gt;3-&gt;5.</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     struct ListNode *next;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function">struct ListNode* <span class="title">removeNthFromEnd</span><span class="params">(struct ListNode* head, <span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> l=<span class="number">0</span>,i;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>* <span class="title">ret</span>,*<span class="title">p</span>=<span class="title">head</span>-&gt;<span class="title">next</span>,*<span class="title">s</span>,*<span class="title">q</span>=<span class="title">head</span>-&gt;<span class="title">next</span>,*<span class="title">r</span>;</span></span><br><span class="line">    ret = (struct ListNode*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(struct ListNode));</span><br><span class="line">    ret-&gt;next=<span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">while</span>(q!=<span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        l++;</span><br><span class="line">        q=q-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(l==<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    r=ret;</span><br><span class="line">    <span class="keyword">for</span>(i=l-n;i&gt;<span class="number">0</span>;i--)</span><br><span class="line">    &#123;</span><br><span class="line">        s=(struct ListNode*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(struct ListNode));</span><br><span class="line">        s-&gt;val=p-&gt;val;</span><br><span class="line">        r-&gt;next=s;</span><br><span class="line">        r=s;</span><br><span class="line">        p=p-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    p=p-&gt;next;</span><br><span class="line">    <span class="keyword">for</span>(i=n<span class="number">-1</span>;i&gt;<span class="number">0</span>;i--)</span><br><span class="line">    &#123;</span><br><span class="line">        s=(struct ListNode*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(struct ListNode));</span><br><span class="line">        s-&gt;val=p-&gt;val;</span><br><span class="line">        r-&gt;next=s;</span><br><span class="line">        r=s;</span><br><span class="line">        p=p-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    r-&gt;next=<span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>此方法比较简单，但是所用的内存过大，而且时间复杂度也是O(n)，最好参照下面的做法</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">struct ListNode* <span class="title">removeNthFromEnd</span><span class="params">(struct ListNode* head, <span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (head == <span class="literal">NULL</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> len = <span class="number">0</span>;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>* <span class="title">node</span> = <span class="title">head</span>;</span></span><br><span class="line">    <span class="keyword">while</span> (node != <span class="literal">NULL</span>) &#123;</span><br><span class="line">        len++;</span><br><span class="line">        node = node-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (len == n) &#123;</span><br><span class="line">        head = head-&gt;next;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    node = head;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; len - n; ++i) &#123;</span><br><span class="line">        node = node-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (node-&gt;next != <span class="literal">NULL</span>) &#123;</span><br><span class="line">        node-&gt;next = node-&gt;next-&gt;next;</span><br><span class="line">    &#125; </span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> head; </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">作者：Dint</span></span><br><span class="line"><span class="comment">链接：https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/solution/19-shan-chu-lian-biao-de-dao-shu-di-nge-jie-dia-44/</span></span><br><span class="line"><span class="comment">来源：力扣（LeetCode）</span></span><br><span class="line"><span class="comment">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-
-<p>这个直接使用原链表进行修改返回，比本人的算法从空间内存和可读性都大大提升了。还有许多更好的时间复杂度算法可以自行去官网理解，奉上连接</p>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/solution/19-shan-chu-lian-biao-de-dao-shu-di-nge-jie-dia-44/">Leetcode链接</a></p>
-</blockquote>
-</li>
+<li><strong>应用层（Telnet,FTP,E-mail,HTTP,SSL,SIP,等等）</strong></li>
+<li><strong>运输层（TCP,UDP）<!-- UDP，TCP主要依赖IP传输 --></strong></li>
+<li><strong>网络层（IP,ICMP,IGMP）</strong></li>
+<li><strong>链路层（设备驱动程序及接口卡）</strong></li>
 </ol>
+<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1602092857808&di=58246e25f13e02a45f93d20b8181677c&imgtype=0&src=http%3A%2F%2Fimg2020.cnblogs.com%2Fblog%2F984733%2F202009%2F984733-20200902174242943-2065075535.png">
+
+<p><em>应用层一般不直接调用IP协议</em></p>
+<p><em>查看路由口令（netstat -r）查看会话（netstat -an）</em></p>
+<h3 id="一些常见的协议用途"><a href="#一些常见的协议用途" class="headerlink" title="一些常见的协议用途"></a>一些常见的协议用途</h3><p>​    <strong>IP提供不可靠，无连接的数据报传送服务</strong></p>
+<p>​    <strong>TCP在不可靠的IP层上提供一个可靠的运输层（TCP的三次握手）</strong></p>
+<p>​    <strong>TCP加密打包，IP运输（IP不可靠，易丢包）</strong></p>
+<p>​    <strong>UDP不可靠，掉包不重传，例如语音电话等（运输速度快）</strong></p>
+<p>​    <strong>ICMP(附属协议)讯息兵，如传输一些丢包后的相关信息(ping)</strong></p>
+<h3 id="数据封装"><a href="#数据封装" class="headerlink" title="数据封装"></a>数据封装</h3><p>​    <strong>数据每过一层（添加对应的头部），就会加上一个相关的记号（成帧过程）</strong></p>
+<p>​    <strong>以太网数帧（46~1500）字节，不够补齐</strong></p>
+<p>​    <strong>帧首部(16bit)—–&gt;IP,ARP,RARP</strong></p>
+<p>​    <strong>IP首部（8bit）协议域（ICMP,IGMP,TCP,UDP）（端口号）</strong></p>
+<p>​    <strong>TCP/UDP（16bit）表示不同应用程序（分用）（FTP,Telnet,http）–&gt;主机到主机</strong></p>
+<p>​    <strong>一般来说（1024~5000）为临时端口号</strong></p>
+<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1602095830843&di=a2302b42f502972aaa1ceac05816500a&imgtype=0&src=http%3A%2F%2Fseo-1255598498.file.myqcloud.com%2Ffull%2F91089bddd782ad8d768d8288141f2ebd64943d8a.jpg" style="zoom: 80%;">
+
+<p>​    <strong>IP首部（20字节）不动–&gt;指路由之间跳转不会改变</strong></p>
+<p>​    <strong>首部最小20个字节，最大60个字节。最小时就是只有固定部分（每个单位32bit，也就是4个字    节，共5行，就是20个字节），一个单位指的是一行。</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/20190317101238221.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1d1MDAwOTk5,size_16,color_FFFFFF,t_70">    </p>
+<p>​    <strong>区分服务（8bit）中有优先级吞吐量等设置说明</strong></p>
+<p>​    <strong>片偏移如TCP分片时会进行记录偏移量，用于到目的地进行整合资源</strong></p>
+<p><strong>当路由转发的时候：源地址不变，目的地址不变，Mac(网卡识别)地址会改变</strong></p>
+<p><strong>DHCP–&gt;动态获取地址</strong></p>
+<p><em>ICMP:1,TCP:6,UDP:7     0800:IP</em></p>
+<p><em>路径MTU 127~环回接口</em> </p>
+<p><em>8023，以太</em></p>
 
       
 
@@ -296,7 +296,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/09/23/Leetcode-node/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/10/08/TCP-IP-notes/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -310,18 +310,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/10/08/TCP-IP-notes/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          TCP/IP_notes
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/09/20/myfirstBlog/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">搭建hexo+GitHub博客</div>
+    <a href="/2020/09/23/Leetcode-node/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Leetcode_node</div>
       <i class="icon-circle-right"></i>
     </a>
   
