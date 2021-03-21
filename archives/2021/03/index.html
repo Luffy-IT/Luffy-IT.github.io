@@ -6,47 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>TCP/IP_notes | Hexo</title>
+  <title>Archives: 2021/3 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="TCP&#x2F;IP协议学习笔记相关书籍：TCP&#x2F;IP详解卷1：协议 One day（包含了一些基础的知识点）">
-<meta property="og:type" content="article">
-<meta property="og:title" content="TCP&#x2F;IP_notes">
-<meta property="og:url" content="http://example.com/2020/10/08/TCP-IP-notes/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/archives/2021/03/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="TCP&#x2F;IP协议学习笔记相关书籍：TCP&#x2F;IP详解卷1：协议 One day（包含了一些基础的知识点）">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2018414355,1230289273&fm=26&gp=0.jpg">
-<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605458612570&di=294bf596b10d3274ed295a3ae59a8220&imgtype=0&src=http://img.96weixin.com/ueditor/20190830/1567131874773253.jpg">
-<meta property="og:image" content="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1607125162,3245613233&fm=26&gp=0.jpg">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190317101238221.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1d1MDAwOTk5,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://ss1.baidu.com/6ON1bjeh1BF3odCf/it/u=1287751746,486848972&fm=15&gp=0.jpg">
-<meta property="og:image" content="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1938955930,2195813581&fm=26&gp=0.jpg">
-<meta property="og:image" content="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2903859860,3519753170&fm=26&gp=0.jpg">
-<meta property="og:image" content="data:image/jpeg;base64,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">
-<meta property="og:image" content="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=398297468,2130739180&fm=26&gp=0.jpg">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190115091906765.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4NjU3NTc3,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2823849366,3011978633&fm=26&gp=0.jpg">
-<meta property="og:image" content="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2173303415,4278382314&fm=26&gp=0.jpg">
-<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1603650517264&di=51e48d8e3d965711f1c2949d111c0e87&imgtype=0&src=http://img4.imgtn.bdimg.com/it/u=1860747654,2249195387&fm=214&gp=0.jpg">
-<meta property="og:image" content="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4193248681,3389590048&fm=15&gp=0.jpg">
-<meta property="og:image" content="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1033825685,629660505&fm=26&gp=0.jpg">
-<meta property="og:image" content="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2710356074,3840187956&fm=15&gp=0.jpg">
-<meta property="og:image" content="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2405004133,2716000741&fm=11&gp=0.jpg">
-<meta property="og:image" content="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2032511855,3452244281&fm=26&gp=0.jpg">
-<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605032220907&di=85dc2292600b0f3931b75564552ce2e2&imgtype=0&src=http://pic2.zhimg.com/v2-3690d80d69d751294c452d8345c49bad_b.jpg">
-<meta property="og:image" content="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4095517601,2251909542&fm=15&gp=0.jpg">
-<meta property="og:image" content="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2325897193,2451813282&fm=11&gp=0.jpg">
-<meta property="og:image" content="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2258027089,3988490010&fm=26&gp=0.jpg">
-<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605435705129&di=7bcc5968cdfdcb882d04aa3c91a02311&imgtype=0&src=http://pic.qcsdn.com/img/20190408/020fc48b3828117f7f1e72455bc51c8e.png">
-<meta property="og:image" content="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=194192826,1282515751&fm=26&gp=0.jpg">
-<meta property="og:image" content="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3736044127,1684319463&fm=26&gp=0.jpg">
-<meta property="og:image" content="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2469291439,2822663515&fm=26&gp=0.jpg">
-<meta property="og:image" content="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=200187144,2713323828&fm=26&gp=0.jpg">
-<meta property="article:published_time" content="2020-10-08T09:08:34.000Z">
-<meta property="article:modified_time" content="2020-11-15T14:22:01.875Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2018414355,1230289273&fm=26&gp=0.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -182,622 +150,49 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-TCP-IP-notes" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      TCP/IP_notes
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2021" class="archive-year">2021</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2021/03/21/Push-github-issue/" class="archive-article-date">
+  	<time datetime="2021-03-21T12:47:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-21</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2021/03/21/Push-github-issue/">Push-github-issue</a>
     </h1>
   
 
-        
-        <a href="/2020/10/08/TCP-IP-notes/" class="archive-article-date">
-  	<time datetime="2020-10-08T09:08:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="TCP-IP协议学习笔记"><a href="#TCP-IP协议学习笔记" class="headerlink" title="TCP/IP协议学习笔记"></a>TCP/IP协议学习笔记</h1><p><em>相关书籍：TCP/IP详解卷1：协议</em></p>
-<h2 id="One-day（包含了一些基础的知识点）"><a href="#One-day（包含了一些基础的知识点）" class="headerlink" title="One day（包含了一些基础的知识点）"></a>One day（包含了一些基础的知识点）</h2><a id="more"></a>
+        <div class="article-info info-on-right">
+          
+          
 
-<p><strong>一般分为七层，TCP/IP（开放）有其中四层</strong></p>
-<img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2018414355,1230289273&fm=26&gp=0.jpg" style="zoom: 50%;">
-
-<ol>
-<li><strong>应用层（Telnet,FTP,E-mail,HTTP,SSL,SIP,等等）</strong></li>
-<li><strong>运输层（TCP,UDP）<!-- UDP，TCP主要依赖IP传输 --></strong></li>
-<li><strong>网络层（IP,ICMP,IGMP）</strong></li>
-<li><strong>链路层（设备驱动程序及接口卡）</strong></li>
-</ol>
-<p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605458612570&di=294bf596b10d3274ed295a3ae59a8220&imgtype=0&src=http://img.96weixin.com/ueditor/20190830/1567131874773253.jpg"></p>
-<p><em>应用层一般不直接调用IP协议</em></p>
-<p><em>查看路由口令（netstat -r）查看会话（netstat -an）</em></p>
-<h3 id="一些常见的协议用途"><a href="#一些常见的协议用途" class="headerlink" title="一些常见的协议用途"></a>一些常见的协议用途</h3><p>​    IP提供不可靠，无连接的数据报传送服务</p>
-<p>​    TCP在不可靠的IP层上提供一个可靠的运输层（TCP的三次握手）</p>
-<p>​    TCP加密打包，IP运输（IP不可靠，易丢包）</p>
-<p>​    UDP不可靠，掉包不重传，例如语音电话等（运输速度快）</p>
-<p>​    ICMP(附属协议)讯息兵，如传输一些丢包后的相关信息(ping)**</p>
-<h3 id="数据封装"><a href="#数据封装" class="headerlink" title="数据封装"></a>数据封装</h3><p>​    数据每过一层（添加对应的头部），就会加上一个相关的记号（成帧过程）</p>
-<p>​    以太网数帧（46~1500）字节，不够补齐</p>
-<p>​    帧首部(16bit)—–&gt;IP,ARP,RARP</p>
-<p>​    IP首部（8bit）协议域（ICMP,IGMP,TCP,UDP）（端口号）</p>
-<p>​    TCP/UDP（16bit）表示不同应用程序（分用）（FTP,Telnet,http）–&gt;主机到主机</p>
-<p>​    一般来说（1024~5000）为临时端口号**</p>
-<p><img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1607125162,3245613233&fm=26&gp=0.jpg"></p>
-<p>​    IP首部（20字节）不动–&gt;指路由之间跳转不会改变</p>
-<p>​    首部最小20个字节，最大60个字节。最小时就是只有固定部分（每个单位32bit，也就是4个字    节，共5行，就是20个字节），一个单位指的是一行。</p>
-<p><img src="https://img-blog.csdnimg.cn/20190317101238221.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1d1MDAwOTk5,size_16,color_FFFFFF,t_70">    </p>
-<p>​    <strong>区分服务（8bit）中有优先级吞吐量等设置说明</strong></p>
-<p>​    <strong>片偏移如TCP分片时会进行记录偏移量，用于到目的地进行整合资源</strong></p>
-<p><strong>当路由转发的时候：源地址不变，目的地址不变，Mac(网卡识别)地址会改变</strong></p>
-<p><strong>DHCP–&gt;动态获取地址</strong></p>
-<p><em>ICMP:1,TCP:6,UDP:7     0800:IP</em></p>
-<p><em>路径MTU 127~环回接口</em> </p>
-<p><em>8023，以太</em></p>
-<hr>
-<h2 id="Two-day（ARP-ICMP-PING-Traceroute-IP选路）"><a href="#Two-day（ARP-ICMP-PING-Traceroute-IP选路）" class="headerlink" title="Two day（ARP,ICMP,PING,Traceroute,IP选路）"></a>Two day（ARP,ICMP,PING,Traceroute,IP选路）</h2><h4 id="ARP为IP地址到对应的硬件地址之间提供动态映射"><a href="#ARP为IP地址到对应的硬件地址之间提供动态映射" class="headerlink" title="ARP为IP地址到对应的硬件地址之间提供动态映射"></a><strong>ARP为IP地址到对应的硬件地址之间提供动态映射</strong></h4><p>​    <strong>arp -a 查看    arp -d 清除</strong> </p>
-<p>​    <strong>通讯的时候主机会发一个ARP广播（二层广播）–&gt;所有的主机都可以收到</strong></p>
-<p>​    <strong>如何符合要求的会回传一个二层单播包–&gt;给唯一主机发</strong></p>
-<p><img src="https://ss1.baidu.com/6ON1bjeh1BF3odCf/it/u=1287751746,486848972&fm=15&gp=0.jpg"></p>
-<h4 id="ICMP它传递差错报文以及其他需要注意的信息"><a href="#ICMP它传递差错报文以及其他需要注意的信息" class="headerlink" title="ICMP它传递差错报文以及其他需要注意的信息"></a><strong>ICMP它传递差错报文以及其他需要注意的信息</strong></h4><ol>
-<li><strong>查询类</strong></li>
-<li><strong>差错</strong></li>
-<li><strong>回复ICMP超时信息，可利用做主机间通讯的时间检测</strong></li>
-</ol>
-<p>​    <em>TTL若为0或者1，会直接掉包，引起超时</em></p>
-<p>​    <em>有的电脑防火墙不会改TTL(即TTL减1)，不过可以打开这修改功能</em></p>
-<h4 id="TCP-IP实现都在内核中直接支持PING服务器"><a href="#TCP-IP实现都在内核中直接支持PING服务器" class="headerlink" title="TCP/IP实现都在内核中直接支持PING服务器"></a>TCP/IP实现都在内核中直接支持PING服务器</h4><h4 id="Traceroute指令-记录路由路径"><a href="#Traceroute指令-记录路由路径" class="headerlink" title="Traceroute指令(记录路由路径)"></a><strong>Traceroute指令(记录路由路径)</strong></h4><ol>
-<li><strong>并不是所有路由器都支持记录路由选项</strong></li>
-<li><strong>IP首部中留给选项的空间有限</strong></li>
-</ol>
-<p><strong>—-&gt;IP路径记录不好用</strong></p>
-<p><strong>window 看路由表 –&gt; netstat -rn 或者 route print</strong></p>
-<h4 id="IP源站选路"><a href="#IP源站选路" class="headerlink" title="IP源站选路"></a>IP源站选路</h4><p><strong>选路即为有dest=D（#R1,R2,R3）到了下一路由可以dest=R1（#R2,R3,D）下一路会紧接着。替换了dest。（严格路由，宽松路由）</strong></p>
-<p><img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1938955930,2195813581&fm=26&gp=0.jpg"></p>
-<p><strong>大致过程（UDP,TCP）查询路由表–&gt;计算下一站路由器—&gt;转发(若为广播也会发回给源主机)</strong></p>
-<p><strong>注意：PC一般不转发</strong></p>
-<p><em>以太网,IP  –&gt;    只校验头部</em></p>
-<p><em>TCP,ICMP –&gt;    不止头部，后面所有都要校验</em></p>
-<hr>
-<h2 id="Three-Day"><a href="#Three-Day" class="headerlink" title="Three Day"></a>Three Day</h2><h4 id="UDP-简单面向数据报的运输层协议"><a href="#UDP-简单面向数据报的运输层协议" class="headerlink" title="UDP:简单面向数据报的运输层协议"></a>UDP:简单面向数据报的运输层协议</h4><p>​    <strong>进程的每个输出操作都正好产生一个UDP数据报，并组装成一份待发送的IP数据包</strong></p>
-<p>data-&gt;UDP（添加头部）-&gt;IP（添加头部）–&gt;不管大小，保留消息边界(IP不保留)</p>
-<p>data-&gt;TCP(mss)分块–&gt;称为数据流</p>
-<p>UDP不提供可靠性–&gt;IP–&gt;不保证到达目的地</p>
-<p><strong>UDP的三大运用</strong></p>
-<ol>
-<li>查询类：DNS，没有TCP的三次握手，速度快，可多个DNS同时查询</li>
-<li>数据运输：TFTP(停止等待协议),适合无盘工作站</li>
-<li>语音视频流：支持广播和组播（TCP不支持）,支持丢包，保障效率</li>
-</ol>
-<p><strong>UDP头部</strong></p>
-<p>​    <strong>TCP,UDP端口号相互独立，两协议选同一端口为知名服务（DNS）</strong></p>
-<p>UDP校验和–&gt;UDP首部和UDP数据</p>
-<p><strong>UDP,TCP包含一个12字节长的伪首部，包含了IP,源地址等信息，也同时校验</strong></p>
-<p><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2903859860,3519753170&fm=26&gp=0.jpg"></p>
-<p><em>加密协议 IPSEC(UDP)、HTTPS(TCP)(组装)</em></p>
-<h4 id="IP分片（MTU）"><a href="#IP分片（MTU）" class="headerlink" title="IP分片（MTU）"></a>IP分片（MTU）</h4><ol>
-<li>分片过程在出接口的的时候，可能在初始路由或者是中间路由</li>
-<li>分片可能做多次，但是重组只在最后路由（目的地）做一次</li>
-<li>重组装过程在IP层，之后传给UDP或者TCP</li>
-<li>整个组装过程对运输层（TCP/UDP）是透明的</li>
-</ol>
-<h4 id="IP数据包"><a href="#IP数据包" class="headerlink" title="IP数据包"></a>IP数据包</h4><ol>
-<li>16位标识位（唯一标识）</li>
-<li>CU-&gt;没有用到</li>
-<li>DF-&gt;不分片位，当值为1时，不分片直接丢回MTU到主机，为0时分片</li>
-<li>MF-&gt;更多的分片，当值为0时说明没有多余的分片了</li>
-<li>13位偏移-&gt;记录分片的位置，重组的时候利用偏移量进行重组</li>
-</ol>
-<p><img src="data:image/jpeg;base64,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"></p>
-<h5 id="避免分片"><a href="#避免分片" class="headerlink" title="避免分片"></a>避免分片</h5><ol>
-<li>分片后到达目的路由会失序</li>
-<li>即使只缺一片数据就要重传整个数据报（没有办法只传数据报中的一个数据报片）</li>
-</ol>
-<p><em>TCP/UDP不知道，不管分片。</em></p>
-<h4 id="IP分片一些原则"><a href="#IP分片一些原则" class="headerlink" title="IP分片一些原则"></a>IP分片一些原则</h4><ol>
-<li>除最后一片，其他每一片数据部分（除IP首部外的其余部分）必须是8字节的整数倍（不够46则补齐）</li>
-<li>第一片，有ICMP等首部，接下来的分片就没有了，其端口号在UDP首部，只有第一片能被发现</li>
-<li>数据报-&gt;一个完整的数据包（分片之前，重组之后）</li>
-<li>分片、分组，指IP层和链路层之间传送的数据单元</li>
-</ol>
-<h4 id="ICMP不可达差错-需要分片"><a href="#ICMP不可达差错-需要分片" class="headerlink" title="ICMP不可达差错(需要分片)"></a>ICMP不可达差错(需要分片)</h4><p><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=398297468,2130739180&fm=26&gp=0.jpg"></p>
-<p>​    确认下一站网络的MTU，用Traceroute确定路径MTU</p>
-<p>​    无法获取MTU,最好的解决方法是让bsdi会送MTU,solaris根据这MTU采取最优化的分片</p>
-<p>​    UDP与ARP交互作用，除非接收到第一个数据报片，否则并不要求任何产生ICMP差错</p>
-<h4 id="最大UDP数据报长度"><a href="#最大UDP数据报长度" class="headerlink" title="最大UDP数据报长度"></a>最大UDP数据报长度</h4><p>​    IP数据报的最大长度，65535字节</p>
-<p>​    <strong>限制长度因素</strong></p>
-<p>​        1.Socket API 函数设置接收和发送缓存的长度</p>
-<p>​        2.TCP/IP的内核实现</p>
-<p>​        3.与源端和目的端的实现有关</p>
-<h4 id="ICMP源站抑制差错"><a href="#ICMP源站抑制差错" class="headerlink" title="ICMP源站抑制差错"></a><strong>ICMP源站抑制差错</strong></h4><p>​    当一个系统(路由器或主机)接收数据报的速度比其处理速度快时,可能产生这个差错</p>
-<p>​    UDP,则BSD实现通常忽略接收到的源站抑制报文</p>
-<p>​    TCP，接受源站抑制差错报文</p>
-<p>​    UDP输入队列若溢出，不会发出信息说明数据被丢弃</p>
-<p>​    每个端口有多个接收者－＞大多的系统在某一时刻只允许一个程序端点与某个本地的IP地址</p>
-<p>​    及UDP端口号相关联</p>
-<h4 id="广播和多播"><a href="#广播和多播" class="headerlink" title="广播和多播"></a>广播和多播</h4><p><strong>三种IP地址：单播地址，广播地址，多播（组播）地址</strong></p>
-<p>​    <strong>TCP一定是单播</strong></p>
-<p>​    广播和多播应用于UDP(三种都有)-&gt;它们对需要将报文同时推送多个接收者的应用来说十分重要</p>
-<p>TCP是面向连接的协议，它意味着分别运行于两主机（由IP地址确定）内的两进程（由端口号确定）间存在一条连接</p>
-<p>广播（APR，RARP）：有时一个主机要向网上所有其他主机发送帧，这就是广播</p>
-<p><strong>多播处于单播和广播之间：帧反传送给属于多播组的多个主机</strong></p>
-<p><strong>网卡的两种模式</strong></p>
-<ol>
-<li>普通模式：只接收Mac地址为自己的包</li>
-<li>混合模式：抓包，全部收**</li>
-</ol>
-<p><img src="https://img-blog.csdnimg.cn/20190115091906765.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4NjU3NTc3,size_16,color_FFFFFF,t_70"></p>
-<h2 id="Fourth-day（TCP）"><a href="#Fourth-day（TCP）" class="headerlink" title="Fourth day（TCP）"></a>Fourth day（TCP）</h2><h4 id="TCP为应用层提供的服务，及TCP首部的各个字段"><a href="#TCP为应用层提供的服务，及TCP首部的各个字段" class="headerlink" title="TCP为应用层提供的服务，及TCP首部的各个字段"></a>TCP为应用层提供的服务，及TCP首部的各个字段</h4><p><strong>TCP为应用层提供全双工服务</strong></p>
-<p><strong>TCP提供一种面向连接的、可靠的字节流服务</strong></p>
-<p>连接：面向连接意味着两个使用TCP的应用（通常是一个客户和一个服务器）在彼此交换数据之前必须先建立一个TCP连接（先建立通道）</p>
-<p><strong>可靠：TCP通过下列方式提供可靠性（详细可百度说明）</strong></p>
-<ol>
-<li>合理截断数据包</li>
-<li>超时重发</li>
-<li>校验</li>
-<li>失序重新排序</li>
-<li>能够丢弃重复数据</li>
-<li>TCP可以进行流量控制</li>
-</ol>
-<p><strong>TCP的字节流</strong></p>
-<p>​    <strong>两应用通过TCP连接交换8字节构成的字节流，TCP不在字节流中插入记录标识符（字节流服务）</strong></p>
-<p>​    <strong>TCP对字节流的内容不作任何解释，TCP不知道传输的数据字节流是二进制还是ASCII字节，对字    节流解释由TCP连接双方的应用层解释</strong></p>
-<p><strong>TCP头部</strong></p>
-<ol>
-<li>TCP段包括源端和目的端的端口号：用于寻找发端和收端应用程序</li>
-<li>确定TCP连接双方（四元组）：客户IP、端口，服务器IP、端口</li>
-<li>保留的6位没有用（黑客有时候会利用这6位进行攻击）</li>
-<li>6个flag标识位</li>
-<li>16位窗口大小，用来提示可以使用的缓存空间大小</li>
-</ol>
-<p><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2823849366,3011978633&fm=26&gp=0.jpg"></p>
-<p><strong>（65535）TCP窗口扩大，用来提高效率</strong></p>
-<p><strong>MSS：TCP最大报文长度，一般为1460</strong></p>
-<p><strong>TCP报文最大60，正常20个字节</strong></p>
-<p><strong>TCP没有选择确认和否认（即发送的数据接收无法进行判定，通过需要包的顺序进行有无正确接收到数据包）</strong></p>
-<h3 id="TCP连接的建立与终止（全双工）"><a href="#TCP连接的建立与终止（全双工）" class="headerlink" title="TCP连接的建立与终止（全双工）"></a>TCP连接的建立与终止（全双工）</h3><p><strong>TCP是一个面向连接的协议，无论哪一方向另一方发送数据之前都必须先在双方之间建立一条连接</strong></p>
-<p><strong>1.建立TCP连接（三次握手）</strong></p>
-<p><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2173303415,4278382314&fm=26&gp=0.jpg"></p>
-<p><strong>2.断开TCP连接（四次握手）</strong></p>
-<p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1603650517264&di=51e48d8e3d965711f1c2949d111c0e87&imgtype=0&src=http://img4.imgtn.bdimg.com/it/u=1860747654,2249195387&fm=214&gp=0.jpg"></p>
-<p><strong>建立连接（flag位）</strong></p>
-<ol>
-<li>SYN起始序列，FIN结束序列</li>
-<li>初始序列号ISN可看作32bit计数器，每4ms加一（防止序列号出现一样连接出错）</li>
-<li>为防止黑客对ISN序列进行探测从而拦截会话，ASA可以对初始序列号进行扰乱</li>
-</ol>
-<p><strong>关闭连接</strong></p>
-<ol>
-<li>收到一个FIN只意味着这一方向上没有数据流动</li>
-<li>一个TCP连接在收到一个FIN后仍能发送数据（半闭连接）</li>
-<li>一般发送一个FIN申请关闭连接后，另一方很快就可以回复一个FIN</li>
-</ol>
-<p><strong>ASK为1时，确认序号才有效</strong></p>
-<p><strong>RST:重建连接</strong></p>
-<p><strong>连接建立的超时（30s连接不上就结束）</strong></p>
-<p>​    0s—&gt;2s(2)—&gt;6s(4)—&gt;14s(8)—&gt;30s(16)——–重发数据包，括号里面为时间间隔</p>
-<p>​    第一次连接时间隔有出入（系统在计算路线收集数据），第二次以后时间就几乎一样了</p>
-<p>​    时间与操作系统有关，不同的操作系统也会有所不同**</p>
-<p><strong>TCP最大报文段长度（MSS）去掉固定{IP首部，TCP首部长度（40字节）}一般1460字节</strong></p>
-<p><strong>TCP的半关闭</strong></p>
-<p><em>例子：客户通过发FIN的信息通知服务器数据发送完毕，然后服务器可以对数据包进行排序处理（其实也可以换一种方式，客户端直接发送一个特殊的字段来提示服务器，不一定要使用到半关闭）</em></p>
-<h5 id="TCP的状态迁移图"><a href="#TCP的状态迁移图" class="headerlink" title="TCP的状态迁移图"></a><strong>TCP的状态迁移图</strong></h5><p><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4193248681,3389590048&fm=15&gp=0.jpg"></p>
-<p><img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1033825685,629660505&fm=26&gp=0.jpg"></p>
-<h5 id="2MSL等待时间（在此时候，五元组不可使用）"><a href="#2MSL等待时间（在此时候，五元组不可使用）" class="headerlink" title="2MSL等待时间（在此时候，五元组不可使用）"></a><strong>2MSL等待时间（在此时候，五元组不可使用）</strong></h5><p><em>五元组是通信术语。通常是指源IP地址，源端口，目的IP地址，目的端口和传输层协议</em></p>
-<p>指的是：客户端主动发送结束TCP服务之后服务器发FIN给客户端处于TIME_WAIT状态还会发一个确认ACK服务器防止在FIN中掉包，客户会在TIME_WAIT状态等服务器发FIN的过程</p>
-<p>一般是客户端发出终止（处于TIME_WAIT状态），若服务器发出终止则，<strong>会出错</strong>，在2MSL等待时间端口号不能用，这就占用了<strong>服务器的端口号</strong>，客户端处于这种模式不会有问题，客户端口号一般都是随机端口号</p>
-<h5 id="平静时间-："><a href="#平静时间-：" class="headerlink" title="*平静时间**："></a>*<em>平静时间**</em>：</h5><p>​    这个概念自行百度，如今没有怎么使用到这个东西</p>
-<h5 id="复位报文段"><a href="#复位报文段" class="headerlink" title="复位报文段"></a><strong>复位报文段</strong></h5><ol>
-<li>UDP若出现端口无提供服务–&gt;会回复ICMP出错报文</li>
-<li>TCP若出现端口无提供服务–&gt;TCP则会重启服务reset</li>
-</ol>
-<h5 id="异常终止一个连接"><a href="#异常终止一个连接" class="headerlink" title="异常终止一个连接"></a>异常终止一个连接</h5><ol>
-<li>终止一个连接的正常方式是一方发送FIN，有时这也称为有序释放（orderly release）</li>
-<li>有可能发送一个<code>复位报文段</code>而不是FIN中途释放一个连接，有时称这为异常释放（abortive release）</li>
-</ol>
-<p><strong>异常终止一个连接对应用程序来说有两个优点</strong></p>
-<ol>
-<li>丢弃任何待发数据并立即发送复位报文段</li>
-<li>RST的接收方会区分另一端执行的是异常关闭还是正常关闭</li>
-</ol>
-<p><strong>（应用程序使用的API必须提供产生异常关闭而不是正常关闭的手段）</strong></p>
-<h5 id="TCP选项（补充4字节边界，先填充NOP）"><a href="#TCP选项（补充4字节边界，先填充NOP）" class="headerlink" title="TCP选项（补充4字节边界，先填充NOP）"></a><strong>TCP选项</strong>（补充4字节边界，先填充NOP）</h5><p><strong>MSS选项</strong>：通知<strong>最大可接收量</strong>。发送SYN的TCP一端使用本选项通告对端它的<strong>最大分节大小</strong>（maximum segment size）即MSS，也就是它在本连接的每个TCP分节中愿意接受的最大数据量。发送端TCP使用接收端的MSS值作为所发送字节的最大大小。</p>
-<p><strong>窗口规模选项</strong>：主要指的是<strong>滑动窗口</strong>中窗口的规模。TCP连接任何一端能够通告对端的最大窗口大小是65535，因为在TCP首部中相应的字段占16位。当然会有特殊情况，<strong>窗口扩大因子</strong></p>
-<p><strong>NOP（no operation）</strong> </p>
-<p>从字面意思也看出来了，这个字段实际上是没有任何意义的字段。设计该字段主要是用来提供填充垫片。TCP的头部必须是4byte的倍数，但是大多数的TCP选项不是4byte的倍数。假如出现了整个TCP选项部分不是4byte的倍数，那么就需要使用1或多个字节无意义的nop 来填充，使之符合TCP的头部构造的规定。例如，选项部分只有6byte ，2个字节的nop就会用来做垫片。  </p>
-<h3 id="TCP的交互数据流"><a href="#TCP的交互数据流" class="headerlink" title="TCP的交互数据流"></a>TCP的交互数据流</h3><ol>
-<li>如果按照分组数量计算，约有一半的TCP报文段包含成块数据（如FTP、电子邮件和Usenet新闻），另一半则包含交互数据（如Telnet和Rlogin）</li>
-<li>如果按字节计算，则成块数据与交互数据的比例约为90%和10%</li>
-<li>TCP需要同时处理这两类数据，但使用的处理算法则有所不同。</li>
-</ol>
-<h4 id="交互式输入"><a href="#交互式输入" class="headerlink" title="交互式输入"></a>交互式输入</h4><p><strong>通常每一个交互按键都会产生一个数据分组</strong></p>
-<p><strong>这样就会产生4个报文段：</strong></p>
-<ol>
-<li>来自客户的交互按键</li>
-<li>来自服务器的按键确认</li>
-<li>来自服务器的按键回显</li>
-<li>来自客户的按键回显确认</li>
-</ol>
-<p><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2710356074,3840187956&fm=15&gp=0.jpg"></p>
-<p>如上图通常服务器TCP收到数据时，不立即发ACK确认，相反会推迟（延迟为200ms），以便将ACK与需要沿着该方向发送的数据一起发送</p>
-<p>但是一般数据键入没有200ms这么快，所以还是要等客户往服务器输送数据，不够优化</p>
-<p>Nagle算法：要求一个TCP连接上最多只能有一个未被确认的未完成小分组（这样时间上就有了比较大的延迟）</p>
-<p><strong>需要关闭该算法的例子：</strong></p>
-<ol>
-<li>鼠标移动（需要快速反应）</li>
-<li>特殊功能键（假如一个字节过去无法识别功能键，需要等200ms才能回ACK，延迟过大）</li>
-</ol>
-<p><strong>窗口大小通告</strong></p>
-<p>​    <strong>ACK确认来时，TCP总有数据要发，则客户通告窗口大小总是小于4096</strong></p>
-<h3 id="TCP成块数据流"><a href="#TCP成块数据流" class="headerlink" title="TCP成块数据流"></a>TCP成块数据流</h3><p>1.滑动窗口协议    2.PUSH标志（如今逐渐被淘汰）</p>
-<h4 id="正常数据流"><a href="#正常数据流" class="headerlink" title="正常数据流"></a>正常数据流</h4><p><strong>一般使用“隔一个报文段确认的策略”，一般来说MSS=MTU-40</strong></p>
-<p><strong>当数据网络主机一样的时候，抓包TCP和UDP会有所不同</strong></p>
-<ol>
-<li>TCP不稳定（不稳定是说包会进行切分），一般抓的包是不一样的（数据流）</li>
-<li>UDP一般是一样的</li>
-</ol>
-<p><strong>接收端TCP和发送端TCP都没有单一正确的方法来交换给定数量的数据</strong></p>
-<p>当发送端发数据比较快，接收端接收数据时比较慢的时候，接收端会发一个ACK确认，告诉发送端窗口大小为0，接收数据缓冲已经满了，这样子发送端就会停止发送。</p>
-<p>当接收端更新窗口大小不为0的时候，发送端就会继续发送数据（一般有两个报文段大小才会发ACK更新信息）</p>
-<h4 id="滑动窗口协议"><a href="#滑动窗口协议" class="headerlink" title="滑动窗口协议"></a>滑动窗口协议</h4><ol>
-<li><strong>发送方不必发送一个全窗口大小的数据</strong></li>
-<li><strong>来自接收方的一个报文段确认数据并把窗口向右边滑动。这是因为窗口的大小时相对于确认序号的</strong></li>
-<li><strong>窗口大小可以减小，但是窗口的右边沿不能向左移动</strong></li>
-<li><strong>接收方在发送一个ACK前不必等待窗口被填满，有时候收到两个报文段就会发送一个ACK</strong></li>
-</ol>
-<p><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2405004133,2716000741&fm=11&gp=0.jpg"></p>
-<p><strong>如图所示，窗口只能右移不能左移，窗口大小是可以改变的</strong></p>
-<p><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2032511855,3452244281&fm=26&gp=0.jpg"></p>
-<p>​    <strong>窗口合拢时：表示数据收到且确认</strong></p>
-<p>​    <strong>窗口张开时：数据被应用层从缓存读取，缓存区变大</strong></p>
-<p>​    <strong>窗口收缩：此种方式不被推荐使用</strong></p>
-<p>​    <strong>当确认序列号增加时，滑动窗口在移动</strong></p>
-<p>​    <strong>窗口大小通告：如今高速网络窗口一般很大（可调），窗口大小与操作系统有关，跟应用层无关</strong></p>
-<h4 id="PUSH标志（现如今有点过时了）"><a href="#PUSH标志（现如今有点过时了）" class="headerlink" title="PUSH标志（现如今有点过时了）"></a>PUSH标志（现如今有点过时了）</h4><p>​    <em>有了这个标志，接收方要快速提交数据到应用层（现在一般不会这个标志了，不会因为这个标志位加快这个数据的传输速度）</em></p>
-<h4 id="慢启动（算法）"><a href="#慢启动（算法）" class="headerlink" title="慢启动（算法）"></a>慢启动（算法）</h4><p><strong>本章例子发送方都发多个报文段到接收方通告的窗口大小为止，但存在多个路由器和速率较慢的链路层时，则会出现问题</strong></p>
-<p>更详细可访问此网址</p>
-<p>[]: <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42528266/article/details/104782523">https://blog.csdn.net/weixin_42528266/article/details/104782523</a>    “连接”</p>
-<p><strong>该算法通过观察到新分组进入网络的速率应该与另一端返回确认的速率相同而进行工作</strong></p>
-<p><strong>该算法提供两个流量控制</strong></p>
-<ol>
-<li>发送方的TCP—&gt;拥塞窗口（cwnd）创建连接时，窗口初始化为一个报文段（每接收一个确认ACK时就+1报文段，指数增长）</li>
-<li>接收方的TCP—&gt;通告窗口</li>
-</ol>
-<p><code>传输的速率一般由通告窗口和cwnd哪个小就由哪个决定</code></p>
-<p><strong>当运输速率达到互联网容量时，中间路由器开始丢弃分组，通知发送方它的拥塞窗口</strong></p>
-<p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605032220907&di=85dc2292600b0f3931b75564552ce2e2&imgtype=0&src=http://pic2.zhimg.com/v2-3690d80d69d751294c452d8345c49bad_b.jpg"></p>
-<p><strong>发送一个分组的时间，影响时间因素有</strong></p>
-<ol>
-<li>传播时延（千兆速率）</li>
-<li>发送时延（速率较慢）</li>
-</ol>
-<p><strong>成块数据吞吐量</strong></p>
-<p><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4095517601,2251909542&fm=15&gp=0.jpg"></p>
-<p><strong>慢启动最优的时候，发送方发一个报文段，接收方就回一个ACK</strong></p>
-<p><em>带宽时延乘积（通道容量）</em></p>
-<h3 id="TCP的超时和重传"><a href="#TCP的超时和重传" class="headerlink" title="TCP的超时和重传"></a>TCP的超时和重传</h3><p><strong>对任何实现而言，超时和重传的策略，怎样决定超时间隔和如何确定重传的频率的问题</strong></p>
-<p><strong>四个定时器</strong></p>
-<ol>
-<li>重传定时器–&gt;设置定时器，发送数据后没有收到ACK确认就重传数据</li>
-<li>坚持定时器–&gt;发送方监控窗口更新</li>
-<li>保活定时器</li>
-<li>2MSL定时器–&gt;上面有提到过，这里就不在重复了</li>
-</ol>
-<p><strong>TCP坚持定时器（发送数据时间间隔为指数退避，最大为60S）</strong></p>
-<p>​    若一个确认丢失，则双方可能等待对方时间过久而连接终止</p>
-<p>​    解决方法：发送方使用坚持定时器，检查窗口是否增大（窗口探查）</p>
-<p><strong>TCP保活定时器（现在TCP不会有这个定时器了，保活工作由应用层决定）</strong></p>
-<p>​    每两个小时发确认响应包，反常时会一直发，知道超时就会断开连接</p>
-<p>​    TCP不适用的原因</p>
-<p>​    1.释放掉一个好的连接</p>
-<p>​    2.耗费不必要的带宽</p>
-<p>​    3.分组计费，连接互联网花费更多的钱（发reping包）</p>
-<p><strong>模糊窗口综合症（为解决小窗口造成的资源浪费）</strong></p>
-<p>​    1）实现如果出现以下情况不会更新窗口</p>
-<p>​        接收方的窗口小于一个报文段或者窗口小于接收方的缓存空间的一半</p>
-<p>​    2）发送方只有出现以下情况才会发送数据</p>
-<p>​        1.可以发1个满长度的报文段</p>
-<p>​        2.发送至少是通告窗口大小一半的报文段</p>
-<p>​        3.还剩下一点点数据的时候</p>
-<p>往返时间测量的意义：TCP超时与重传中最重要部分是对一个给定连接的经返时间的测量</p>
-<p>计算时间所用的算法：RFC793算法，Jacobson1988算法（现在用这种比较多）</p>
-<h3 id="拥塞"><a href="#拥塞" class="headerlink" title="拥塞"></a>拥塞</h3><p>拥塞举例</p>
-<p><img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2325897193,2451813282&fm=11&gp=0.jpg"></p>
-<h4 id="拥塞避免算法"><a href="#拥塞避免算法" class="headerlink" title="拥塞避免算法"></a>拥塞避免算法</h4><p>两组分组丢失的指示：</p>
-<p>​    发生超时–&gt;用慢启动算法</p>
-<p>​    接收到重复的确认ACK（3个或3个以上）–&gt;用拥塞避免算法</p>
-<p><em>超时则使用一个好的RTT算法</em></p>
-<p>拥塞避免算法和慢启动算法是两个目的不同，独立的算法，但是拥塞发生时，我们希望降低分组进入网络的传输速率，于是可以调用慢启动来做到这一点，在实际中这两个算法通常在一起实现</p>
-<p><strong>拥塞避免过程要点</strong></p>
-<p>拥塞避免算法和慢启动算法需要对每个连接维持两个变量：一个<strong>拥塞窗口cwnd</strong>和一个<strong>慢启动门限ssthresh</strong>。过程如下</p>
-<ol>
-<li><p>一个给定的连接，初始化cwnd为1个报文段，ssthresh为65535个字节</p>
-</li>
-<li><p>TCP输出例程的输出不能超过cwnd和接收方通告窗口的大小</p>
-<p>​    拥塞避免是发送方使用的流量控制，是发送方感受到网络拥塞的估计</p>
-<p>​    通告窗口是接收方的流量控制，是接收方在该连接上的可用缓存大小有关</p>
-</li>
-<li><p>当拥塞发生时(超时或收到重复确认)，ssthresh被设置为当前窗口大小的一半(cwnd和接收方通告窗口大小的最小值，但最少为2个报文段)，此外如果是超时引起了拥塞，则cwnd被设置为1个报文段(这就是慢启动)</p>
-</li>
-<li><p>当新的数据被对方确认时，就增加cwnd，但增加的方法依赖于我们是否正在进行慢启动或拥塞避免。<strong>如果cwnd小于或者等于ssthresh，则正在进行慢启动，否则正在进行拥塞避免</strong>。慢启动一直持续到我们回到当拥塞发生时所处位置的半时候才停止(因为我们记录了在步骤2中给我们制造麻烦的窗口大小的一半)，然后转为执行拥塞避免。</p>
-</li>
-</ol>
-<p>过程图示如下</p>
-<p><img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2258027089,3988490010&fm=26&gp=0.jpg"></p>
-<p><strong>出现超时重传拥塞时，cwnd变为1，启动慢启动</strong></p>
-<p><strong>接收到重复的确认(3个或3个ACK)拥塞时，启用快速重传算法（快速回复算法），直接重传无需等待定时器溢出，此时cwnd为门限加3个ACK</strong></p>
-<h4 id="快速恢复算法"><a href="#快速恢复算法" class="headerlink" title="快速恢复算法"></a>快速恢复算法</h4><ol>
-<li>当收到第3个重复的ACK时，将ssthresh设置为当前拥塞窗口cwnd的一半，重传丢失的报文段。<strong>设置cwnd为ssthresh加上3倍的报文段大小</strong>。</li>
-<li>每次收到另一个重复的ACK时，cwnd增加1个报文段大小并发送一个分组（如果新的cwnd允许发送）。</li>
-<li>当下一个确认新数据ACK到达时，设置cwnd为ssthresh（在第一步中设置的值）。这个ACK应该是在进行重传后的一个往返时间内对步骤1中<strong>重传的确认</strong>。另外，这个ACK也应该是对丢失的分组和收到的第1个重复的ACK之间的<strong>所有中间报文段的确认</strong>。这一步采用的是拥塞避免，因为当分组丢失时我们将当前的速率减半。</li>
-</ol>
-<p>（拥塞）cwnd小于未被确认的数据，则不能发送数据</p>
-<p>cwnd，门限等值会在路由表保存，建立新连接时会用这些数据来初始化</p>
-<h5 id="ICMP差错"><a href="#ICMP差错" class="headerlink" title="ICMP差错"></a>ICMP差错</h5><p>TCP常见的ICMP差错源站抑制（主机不可达，网络不可达），会忽略，坚持重传</p>
-<p>源站抑制–&gt;cwnd为一个报文段，发起慢启动，门限ssthresh没有变化</p>
-<h5 id="TCP重组分组"><a href="#TCP重组分组" class="headerlink" title="TCP重组分组"></a>TCP重组分组</h5><p>当丢包重传时，可能和之后的数据一齐发，但一起发的包不能大于接收方的MSS有重复的包也无所谓，可以通过字节序号进行重整。</p>
-<h2 id="应用层协议部分"><a href="#应用层协议部分" class="headerlink" title="应用层协议部分"></a>应用层协议部分</h2><ol>
-<li>FTP（传送数据）</li>
-<li>Telnet（命令行）</li>
-<li>HTTP（网页）</li>
-<li>SMTP/POP3（邮件收发）</li>
-<li>SSL（加密协议）</li>
-<li>SNMP（简单网络管理协议）</li>
-<li>语音协议分析</li>
-</ol>
-<h3 id="FTP：数据传输主流协议"><a href="#FTP：数据传输主流协议" class="headerlink" title="FTP：数据传输主流协议"></a>FTP：数据传输主流协议</h3><p><strong>两个通道：</strong></p>
-<ol>
-<li>控制通道（控制命令）—&gt;第一信道</li>
-<li>数据信道                      —–&gt;第二信道</li>
-</ol>
-<p><strong>两个模式</strong></p>
-<ol>
-<li>Active Mode（由第二信道主动发起）</li>
-<li>Passive Mode（由第二信道被动接收）</li>
-</ol>
-<h4 id="Active-Mode"><a href="#Active-Mode" class="headerlink" title="Active Mode"></a><strong>Active Mode</strong></h4><p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605435705129&di=7bcc5968cdfdcb882d04aa3c91a02311&imgtype=0&src=http://pic.qcsdn.com/img/20190408/020fc48b3828117f7f1e72455bc51c8e.png"></p>
-<p>在第一信道建立TCP连接（三次握手）客户端请求服务端（tcp连接，port操作）</p>
-<p>​    port，让服务器知道客户的地址及端口号，进行连接</p>
-<p>在第二信道服务器建立TCP连接，回显信息，下载等操作（服务器主动在第二信道建立TCP连接）</p>
-<p>​    因为在第一信道通过port知道了客户端的地址和端口号</p>
-<h4 id="Passive-Mode（一般在此种模式）"><a href="#Passive-Mode（一般在此种模式）" class="headerlink" title="Passive Mode（一般在此种模式）"></a><strong>Passive Mode</strong>（一般在此种模式）</h4><p><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=194192826,1282515751&fm=26&gp=0.jpg"></p>
-<p>在此种模式下，源端口和目的端口都是随机的</p>
-<p>客户端主动在第二信道建立TCP连接，客户发pasv获取服务器的地址及端口号</p>
-<h4 id="防火墙或NAT设备对FTP的影响"><a href="#防火墙或NAT设备对FTP的影响" class="headerlink" title="防火墙或NAT设备对FTP的影响"></a>防火墙或NAT设备对FTP的影响</h4><p>Port出去时ASA对源和端口进行修改，当模式为Active，ASA会对服务器建立TCP不阻止，通过NAT之后，ASA对源和端口修改回来</p>
-<p><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3736044127,1684319463&fm=26&gp=0.jpg"></p>
-<h3 id="Telnet协议（不安全，建议换成SSH）"><a href="#Telnet协议（不安全，建议换成SSH）" class="headerlink" title="Telnet协议（不安全，建议换成SSH）"></a>Telnet协议（不安全，建议换成SSH）</h3><p>Telnet协议是TCP/IP协议族的一员，是Internet远程登陆服务的标准协议和主要方式</p>
-<p>是常用的远程控制路由器的方法</p>
-<p>需要输入用户名和密码登录服务器</p>
-<p>容易被人窃取信息，用户名，密码等</p>
-<h3 id="HTTP协议—-gt-超文本协议"><a href="#HTTP协议—-gt-超文本协议" class="headerlink" title="HTTP协议—&gt;超文本协议"></a>HTTP协议—&gt;超文本协议</h3><p>用于从www服务器传输超文本到本地浏览器的传送协议</p>
-<p>一个客户端和服务器请求和应答的标准（TCP）</p>
-<p>超文本传输协议是互联网上应用最为广泛的一种网络协议，所有的www文件都必须遵守这个标准</p>
-<p>特点：</p>
-<p>​    哑服务器（连接上不回信息，输入命令才回复信息）</p>
-<p>​    瞬时协议（请求，答应后直接断开TCP连接）</p>
-<p>HTTP术语</p>
-<p><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2469291439,2822663515&fm=26&gp=0.jpg"></p>
-<p>HTTPRFC标准命令</p>
-<p>get，head，等，安全起见有的命令不可用</p>
-<h3 id="SMTP-POP3（邮箱）传输协议：TCP-25"><a href="#SMTP-POP3（邮箱）传输协议：TCP-25" class="headerlink" title="SMTP/POP3（邮箱）传输协议：TCP/25"></a>SMTP/POP3（邮箱）传输协议：TCP/25</h3><h5 id="SMTP协议邮件路由过程"><a href="#SMTP协议邮件路由过程" class="headerlink" title="SMTP协议邮件路由过程"></a><strong>SMTP协议邮件路由过程</strong></h5><ol>
-<li>Sendmail请求DNS给出的主机CNAME(别名)</li>
-<li>根据CNAME找到对应的邮箱如shamil.abc.com</li>
-<li>Sendmail请求对DNS给出邮箱的A记录，即IP地址</li>
-</ol>
-<h5 id="SMTP协议工作原理"><a href="#SMTP协议工作原理" class="headerlink" title="SMTP协议工作原理"></a><strong>SMTP协议工作原理</strong></h5><ol>
-<li>建立TCP连接</li>
-<li>客户端发送HELLO，服务器回复OK（打招呼）</li>
-<li>客户端发送RCPT，标识该电子邮件的接收方（发给谁）</li>
-<li>DATA命令开始写邮件，“.”结束，quit退出</li>
-</ol>
-<h5 id="SMTP命令（应用层命令）"><a href="#SMTP命令（应用层命令）" class="headerlink" title="SMTP命令（应用层命令）"></a><strong>SMTP命令（应用层命令）</strong></h5><p>​    helo,mail,rcpt,data,rset,noop,and,quit</p>
-<p>微软的ESMTP命令</p>
-<p>​    auth,data,ehlo,etrn,saml,send,soml,and,vrfy</p>
-<h5 id="POP3收件-应用层-明文-TCP-110"><a href="#POP3收件-应用层-明文-TCP-110" class="headerlink" title="POP3收件(应用层)(明文)TCP:110"></a><strong>POP3收件(应用层)(明文)TCP:110</strong></h5><p>用于收邮件，可使用一些DOS命令来实现</p>
-<p>user,pass,stat,list,retr(读件)，等</p>
-<h3 id="SSL协议"><a href="#SSL协议" class="headerlink" title="SSL协议"></a>SSL协议</h3><p>Secure Socket Layer（SSL）用来加密（私有标准），一般用于邮箱，网页，VPN等</p>
-<p>TLS，在SSL上做了一些修改（公有标准）—&gt;一般在用</p>
-<p>SSL是不依赖于平台和运用程序的协议，用于保障TCP-based运用安全</p>
-<p>SSL在TCP层和运用层之间，就像运用层连接到TCP连接的一个接口</p>
-<h4 id="SSL加密知名协议"><a href="#SSL加密知名协议" class="headerlink" title="SSL加密知名协议"></a>SSL加密知名协议</h4><p>1.HTTP over SSL：加密网页流量是设计SSL的初衷，HTTP也是第一个使用SSL保障安全的运用层协议。</p>
-<p>​    当Netscape在它的Navigator里边运用HTTP over SSL的时候，它使用http://来标识HTTP over SSL，因此HTTP over SSL就以HTTPS格式被我们熟知。后来HTTPS在RFC2818被标准化。HTTPS工作在TCP–443端口，但是普通的HTTP默认工作在TCP–80端口</p>
-<p>2.Email over SSL：类似于HTTP over SSL，邮件协议例如：SMTP，POP3和IMAP也能够支持SSL</p>
-<p>​    SMTP over TLS的标准化文档在RFC2487</p>
-<p>​    POP和IMAP over TLS的标准化文档在RFC2595</p>
-<h3 id="SNMP—-gt-简单网络管理协议"><a href="#SNMP—-gt-简单网络管理协议" class="headerlink" title="SNMP—-&gt;简单网络管理协议"></a>SNMP—-&gt;简单网络管理协议</h3><p>三大组件</p>
-<p>​    SNMP manager（网管终端）</p>
-<p>​    SNMP agent（路由器，交换机）</p>
-<p>​    MIB管理信息库，树状路径，可以访问服务器的一些资源</p>
-<p>操作</p>
-<p>​    get，set,去拉服务器的资源，Trap，服务器推事件过来</p>
-<p>1，2版本不安全，3版本安全</p>
-<h3 id="语音协议"><a href="#语音协议" class="headerlink" title="语音协议"></a>语音协议</h3><p>SCCP协议，SIP协议—电话与call Manger之间的交互协议</p>
-<p>RTP协议（语音流量）—电话与电话之间</p>
-<p><strong>语音整个过程协议介绍</strong></p>
-<ol>
-<li>CDP：获得VLAN信息（voice VLAN）</li>
-<li>DHCP :（通过voice VLAN）获得TFTP地址</li>
-<li>TFTP：获取配置文件</li>
-<li>SCCP/SIP：注册到Call agent</li>
-<li>SCCP/SIP：信令建立过程</li>
-</ol>
-<h4 id="信令建立过程"><a href="#信令建立过程" class="headerlink" title="信令建立过程"></a><strong>信令建立过程</strong></h4><ol>
-<li>SCCP送号码到Call Agent</li>
-<li>Call Manager呼叫路由查找（查询8899电话是否注册）</li>
-<li>Call Manager尝试发起邀请，8899确认</li>
-<li>Call Agent向两台电话发送对方的地址，RTP端口号</li>
-<li>两个电话间直接交换RTP（语音）流量</li>
-</ol>
-<p><strong>SCCP操作细节（按一个键发一个包，服务器有一个响应）</strong></p>
-<ol>
-<li>off hook (SCCP电话到Call Manager)</li>
-<li>播放提示音（ Call Manager到SCCP电话）</li>
-<li>免提(Cal Manager到SCCP电话)</li>
-<li>显示Call Manager到SCCP电话）</li>
-<li>确认电话的呼叫状态（Call Manager到SCCP电话）</li>
-<li>ACK (SCCP电话到Call Manager)</li>
-<li>功能键的定义（ Call Manager到SCCP电话）</li>
-<li>ACK (SCCP电话到Call Manager)</li>
-<li>发送号码“8” (SCCP电话到Call Manager)</li>
-<li>停止拨号提示音（Call Manager到SCCP电话）</li>
-<li>功能键更新（ Call Manager到SCCP电话）</li>
-<li>ACK (SCCP电话到Call Manager)</li>
-<li>发送号码(“8” , (SCCP电话到Call Manager)</li>
-<li>ACK （ Call Manager到SCCP电话</li>
-<li>发送号码”8” (SCCP电话到Call Manager)</li>
-<li>ACK ( Call Manager到SCCP电话)</li>
-<li>发送号码”9” e(SCCP电话到Call Manager) </li>
-<li>ACK (Call Manager到SCCP电话)</li>
-<li>更新电话屏幕显示“8899” （Call Manager到SCCP电话)</li>
-<li>呼叫状态改变（ Call Manager到SCCP电话）</li>
-</ol>
-<p><strong>20个过程20个包</strong></p>
-<p><strong>SIP—–&gt;全部操作按完有一个包</strong></p>
-<p>到此本人学习TCP/IP就告一段落了，上面的笔记也是希望可以帮到看这个博客的人和自己可以回顾一下所学的知识</p>
-<p><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=200187144,2713323828&fm=26&gp=0.jpg"></p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/10/08/TCP-IP-notes/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2021/03/21/Push-github-issue/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Push-github-issue
-        
-      </div>
-    </a>
   
   
-    <a href="/2020/09/23/Leetcode-node/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Leetcode_node</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -820,8 +215,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
